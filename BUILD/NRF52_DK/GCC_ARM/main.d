@@ -111,7 +111,7 @@ BUILD\NRF52_DK\GCC_ARM\main.o: main.cpp \
  mbed-os/hal/mpu_api.h mbed-os/platform/ScopedRamExecutionLock.h \
  mbed-os/platform/mbed_stats.h mbed-os/platform/Callback.h \
  mbed-os/platform/FunctionPointer.h mbed-os/platform/ScopedLock.h \
- nlib\nworkbench.h nlib\fifo.h nlib\BSP\bsp.h nlib\Ticker\ticker.h \
- nlib/nworkbench.h nlib\Counter\counter.h \
- nlib\StringFormat\stringformat.h nlib\nRF5xRadio\nrf5xradio.h \
- nlib\nRF5xRadio\nRFBareRadio/nRFBareRadio.h
+ nlib\nworkbench.h nlib\fifo.h nlib\BSP\bsp.h \
+ nlib\nRF5xRadio\nrf5xradio.h nlib/nworkbench.h \
+ nlib\nRF5xRadio\nRFBareRadio/nRFBareRadio.h \
+ nlib\StringSerial\stringserial.h

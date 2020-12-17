@@ -7,21 +7,15 @@
 #include "nlib\nblocks.h"
 #include "nlib\BSP\bsp.h"
 // Custom nodes:
-#include "nlib\Ticker\ticker.h"
-#include "nlib\Counter\counter.h"
-#include "nlib\StringFormat\stringformat.h"
 #include "nlib\nRF5xRadio\nrf5xradio.h"
+#include "nlib\StringSerial\stringserial.h"
 
 // -*-*- List of node objects -*-*-
-nBlock_Ticker            nb_nBlockNode0_Ticker       (1000);
-nBlock_Counter           nb_nBlockNode1_Counter      (10);
-nBlock_StringFormat      nb_nBlockNode2_StringFormat ("%d");
-nBlock_nRF5xRadio        nb_nBlockNode3_nRF5xRadio   (RADIO_MODE_TX_ONLY, RADIO_RATE_2M, 2, 20, 0xC0, 0x55, 0x42, 0xBB, 0xC2);
+nBlock_nRF5xRadio        nb_nBlockNode0_nRF5xRadio   (RADIO_MODE_RX_ONLY, RADIO_RATE_2M, 2, 20, 0xC0, 0x55, 0x42, 0xBB, 0xC2);
+nBlock_StringSerial      nb_nBlockNode1_StringSerial (P0_31, P0_2);
 
 // -*-*- List of connection objects -*-*-
-nBlockConnection    n_conn0( &nb_nBlockNode2_StringFormat, 0,    &nb_nBlockNode3_nRF5xRadio,   0);
-nBlockConnection    n_conn1( &nb_nBlockNode1_Counter,      0,    &nb_nBlockNode2_StringFormat, 0);
-nBlockConnection    n_conn2( &nb_nBlockNode0_Ticker,       0,    &nb_nBlockNode1_Counter,      0);
+nBlockConnection    n_conn0( &nb_nBlockNode0_nRF5xRadio,   0,    &nb_nBlockNode1_StringSerial, 0);
 
 
 // -*-*- Main function -*-*-
