@@ -40,7 +40,7 @@ The testing setup:
  *  The range covers about 20m inside a domestic building :heavy_check_mark:
 <p align="center">
 <img
-src="img/04.PNG"
+src="img/05.PNG"
 width = 400
 />
 </p>
