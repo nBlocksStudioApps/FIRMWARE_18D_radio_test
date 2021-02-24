@@ -33,6 +33,7 @@ width = 400
 </p>
 
 ----
+
 The testing setup:
  *  Testing with batteries  :heavy_check_mark:
  *  The Receiving Board is connected to the oscilloscope
